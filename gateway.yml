@@ -18,6 +18,10 @@ spring:
           uri: lb://api-course
           predicates:
             - Path=/api/v1/courses/**
+        - id: teachers
+          uri: lb://profesores
+          predicates:
+            - Path=/api/v1/teachers/**
 eureka:
   client:
     registerWithEureka: false
